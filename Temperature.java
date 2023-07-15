@@ -4,8 +4,8 @@ public class Temperature {
     private double fahrenheit;
 
     public Temperature(){
-        celcius = 0.0;
-        fahrenheit = 0.0;
+        this.celcius = 0.0;
+        this.fahrenheit = 0.0;
     }
     
     public void setCelcius(double celcius) {
