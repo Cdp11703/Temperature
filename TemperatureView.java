@@ -20,7 +20,7 @@ public class TemperatureView {
         this.frame = new JFrame("Converter");
 
         this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.frame.setLayout(new GridLayout(4, 1));
+        this.frame.setLayout(new GridLayout(4, 2));
         this.frame.setResizable(false);
         this.frame.setSize(400, 250);
 

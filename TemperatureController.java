@@ -10,35 +10,29 @@ public class TemperatureController {
 		this.tempM = tempM;
 		this.tempV = tempV;
 
-		this.tempV.setConvertBtnListener(new ActionListener(){
+		this.tempV.setConvertBtnListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				String celcius = tempV.getCelcius();
 				String fahrenheit = tempV.getFahrenheit();
-				
-				if (!celcius.isEmpty() && fahrenheit.isEmpty()) {
-					Double Celcius = Double.parseDouble(celcius);
-					Double Fahrenheit = (Celcius * 9/5) + 32.0;
-
-					tempM.setCelcius(Celcius);
-					tempM.setFahrenheit(Fahrenheit);
-
-					tempV.setInfo(Celcius + " Celsius to " + Fahrenheit + " Fahrenheit");
-
-				} else if (celcius.isEmpty() && !fahrenheit.isEmpty()) {
-					Double Fahrenheit = Double.parseDouble(fahrenheit);
-					Double Celcius = (Fahrenheit - 32.0) * 5/9;
-
-					tempM.setCelcius(Celcius);
-					tempM.setFahrenheit(Fahrenheit);
-
-					tempV.setInfo(Fahrenheit + " Fahrenheit to " + Celcius + " Celsius");
-
-				} else {
+		
+				try {
+					if (celcius != null && fahrenheit == null) {
+						double Celsius = Double.parseDouble(celcius);
+						double Fahrenheit = (Celsius * (9 / 5)) + 32.0;
+		
+						tempV.setInfo(Celsius + " Celsius " + " to " + Fahrenheit + " Fahrenheit");
+					} else if (celcius == null && fahrenheit != null) {
+						double Fahrenheit = Double.parseDouble(fahrenheit);
+						double Celsius = (Fahrenheit - 32.0) * (5 / 9);
+		
+						tempV.setInfo(Fahrenheit + " Fahrenheit " + " to " + Celsius + " Celcius");
+					} else {
+						tempV.setInfo("Please input either temperature");
+					}
+				} catch (NumberFormatException x) {
 					tempV.setInfo("Please input either temperature");
 				}
-
-				tempV.clearTextFields();
 			}
 		});
 	}
