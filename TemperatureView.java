@@ -20,12 +20,12 @@ public class TemperatureView {
         this.frame = new JFrame("Converter");
 
         this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.frame.setLayout(new GridLayout(4, 2));
+        this.frame.setLayout(new GridLayout(4,2));
         this.frame.setResizable(false);
         this.frame.setSize(400, 250);
 
-        this.celciusLabel = new JLabel("Celcius: ");
-        this.fahrenheitLabel = new JLabel("Fahrenheit: ");
+        this.celciusLabel    = new JLabel(" Celcius:  ", JLabel.RIGHT);
+        this.fahrenheitLabel = new JLabel(" Fahrenheit:  ", JLabel.RIGHT);
 
         this.celciusText = new JTextField();
         this.celciusText.setColumns(10);
@@ -39,11 +39,13 @@ public class TemperatureView {
         this.infoText.setEditable(false);
 
         JPanel panel1 = new JPanel();
+        panel1.setLayout(new GridLayout(1,2));
         panel1.add(this.celciusLabel);
         panel1.add(this.celciusText);
         panel1.setPreferredSize(new Dimension(220, 30));
 
         JPanel panel2 = new JPanel();
+        panel2.setLayout(new GridLayout(1,2));
         panel2.add(this.fahrenheitLabel);
         panel2.add(this.fahrenheitText);
         panel1.setPreferredSize(new Dimension(220, 30));
