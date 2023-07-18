@@ -48,7 +48,7 @@ public class TemperatureView {
         panel2.setLayout(new GridLayout(1,2));
         panel2.add(this.fahrenheitLabel);
         panel2.add(this.fahrenheitText);
-        panel1.setPreferredSize(new Dimension(220, 30));
+        panel2.setPreferredSize(new Dimension(220, 30));
 
         this.frame.add(panel1);
         this.frame.add(panel2);
