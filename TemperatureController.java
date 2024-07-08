@@ -2,7 +2,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class TemperatureController {
-	
+	// The Controller
 	private Temperature tempM;
     private TemperatureView tempV;
 

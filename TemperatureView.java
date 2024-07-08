@@ -10,7 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class TemperatureView {
-
+    // The View
     private JFrame frame;
     private JLabel celciusLabel, fahrenheitLabel;
     private JTextField celciusText, fahrenheitText, infoText;

@@ -1,5 +1,5 @@
 public class Temperature {
-
+    // The Program
     private double celcius;
     private double fahrenheit;
 
